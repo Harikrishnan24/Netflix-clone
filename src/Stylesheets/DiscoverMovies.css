@@ -1,0 +1,30 @@
+.mrowPosters{
+    display: flex;
+    justify-content: center;
+    padding:18px;
+    flex-wrap: wrap;
+}
+.mrowData{
+    color: aliceblue;
+}
+.mrowPosters::-webkit-scrollbar{
+    display: none;
+}
+
+.mrowPostersImg{
+    height: 340px;
+    width: 260px;
+     margin-top: 20px;
+    border-radius: 2px;
+    object-fit: contain;
+    transition: transform 450ms;
+}
+
+.mrowPostersImg:hover{
+    transform:scale(1.06);
+}
+
+@media only screen and (max-width: 768px) {
+    /* For mobile phones: */
+    
+  }

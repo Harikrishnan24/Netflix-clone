@@ -1,0 +1,67 @@
+.moviePosters {
+  color: white;
+  display: flex;
+  margin-right: 50px;
+  margin-left: 50px;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.viewAll {
+  color: white;
+}
+.mViewAllPostersImg {
+  height: 400px;
+  margin-top: 20px;
+
+  object-fit: contain;
+  transition: all 450ms;
+}
+.mViewAllPostersImg:hover {
+  transform: scale(1.07);
+}
+.pageNumber {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 20px;
+}
+.changePageBtns {
+  color: black;
+  background-color: white;
+  text-transform: uppercase;
+  font-weight: 800;
+  letter-spacing: 1px;
+  outline: none;
+  border: none;
+  width: 100px;
+  height: 40px;
+
+  transition: all 450ms;
+  border-radius: 2px;
+}
+.pagenumberText {
+  color: white;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.changePageBtns:hover {
+  color: white;
+  background-color: black;
+}
+.searchPosters {
+  display: flex;
+  margin-right: 50px;
+  margin-left: 50px;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.mSearchPostersImg {
+  height: 100%;
+  margin-top: 20px;
+  width: 100%;
+  object-fit: contain;
+  transition: all 450ms;
+}
+.colsImg {
+}

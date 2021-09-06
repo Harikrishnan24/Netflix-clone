@@ -1,0 +1,52 @@
+.nav_bar {
+  padding-bottom: 50px;
+}
+.nav_black {
+  background-color: black;
+}
+
+.navBarHeader {
+  width: 100%;
+  height: 45px;
+  display: flex;
+  z-index: 1;
+  position: fixed;
+  transition: all 450ms;
+  justify-content: flex-end;
+  align-items: center;
+}
+.searchTextField {
+  color: black;
+}
+.searchTextField_black {
+  color: white;
+  background-color: transparent;
+  outline: none;
+  border: none;
+
+  text-decoration: none;
+  font-weight: 700;
+}
+.searchFull {
+  display: none;
+}
+.searchFullShow {
+  display: flex;
+
+  align-items: center;
+  flex-direction: row;
+  justify-content: center;
+  border-radius: 10px;
+  padding: 2px;
+  margin-right: 20px;
+  border: 1px solid white;
+}
+.searchIcon {
+  color: white;
+}
+.search_icon {
+  padding-left: 4px;
+  padding-right: 4px;
+}
+.search_field {
+}

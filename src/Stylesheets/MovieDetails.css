@@ -1,0 +1,78 @@
+.backBtn {
+  background-color: white;
+  color: rgb(29, 28, 28);
+  text-transform: uppercase;
+  font-weight: 800;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 18px;
+  padding-right: 18px;
+  border-radius: 2px;
+  outline: none;
+  border: 0.1px solid black;
+  transition: all 450ms;
+}
+.backBtn:hover {
+  background-color: rgb(29, 28, 28);
+  color: white;
+}
+.navBackbtn {
+  padding: 20px;
+}
+.MovieDetails {
+  display: flex;
+  margin-left: 5vw;
+  margin-right: 5vw;
+  flex-direction: column;
+  backdrop-filter: blur(7px) grayscale(0.5);
+}
+.movTitle {
+  padding: 20px;
+  color: white;
+  font-size: 3rem;
+  font-weight: 800;
+  -webkit-text-stroke-width: 0.6px;
+  -webkit-text-stroke-color: black;
+  transition: all 450ms ease-in;
+}
+
+.movDescription {
+  padding: 25px;
+  font-weight: 500;
+  color: white;
+
+  -webkit-text-stroke-width: 0.2px;
+  -webkit-text-stroke-color: black;
+}
+.movCast {
+  display: flex;
+  overflow-y: hidden;
+  overflow-x: scroll;
+}
+.movCast::-webkit-scrollbar {
+  display: none;
+}
+
+.movCastRow {
+  color: white;
+  padding: 20px;
+}
+.movCastName {
+  color: white;
+  font-weight: 600;
+  font-size: 1rem;
+  letter-spacing: 1px;
+  text-align: center;
+}
+.movCastCharacter {
+  color: white;
+  font-weight: 500;
+  letter-spacing: 1px;
+  font-size: 13px;
+  text-align: center;
+}
+
+.movCastImg {
+  object-fit: contain;
+  margin-right: 20px;
+}
