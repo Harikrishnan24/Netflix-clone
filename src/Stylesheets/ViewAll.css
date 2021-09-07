@@ -37,7 +37,7 @@
   width: 100px;
   height: 40px;
 
-  transition: all 450ms;
+  transition: all 1s;
   border-radius: 2px;
 }
 .pagenumberText {
@@ -45,9 +45,12 @@
   padding-left: 10px;
   padding-right: 10px;
 }
-.changePageBtns:hover {
-  color: white;
-  background-color: black;
+
+@media (hover: hover) {
+  .changePageBtns:hover {
+    color: white;
+    background-color: black;
+  }
 }
 .searchPosters {
   display: flex;

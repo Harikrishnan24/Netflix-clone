@@ -18,7 +18,7 @@ const MovieCardRowComponent = (props) => {
 
     fetchData();
   }, [props.fetchURL]);
-  console.log(movies);
+  //console.log(movies);
   /*const listRef = useRef();
   var x = 0;
   const handleArrowClick = (dir) => {
@@ -55,7 +55,7 @@ const MovieCardRowComponent = (props) => {
             key={movie.id}
           >
             <img
-              height={250}
+              height={240}
               style={{ objectFit: "contain" }}
               src={`${imgBaseURL}${movie.poster_path}`}
               alt={movie?.original_title || movie?.original_name}

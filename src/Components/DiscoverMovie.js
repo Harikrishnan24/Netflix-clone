@@ -11,14 +11,14 @@ const DiscoverMovieComponent = (props) => {
       //console.log(axios.get(props.fetchURL))
       //console.log(request.data.results)
 
-      console.log(request.data);
+      //console.log(request.data);
       setMovies(request.data.results);
       return request;
     }
 
     fetchData();
   }, [props.fetchURL]);
-  console.log("From DIscover", movies);
+  //console.log("From DIscover", movies);
   return (
     <div className="mrowData">
       <div className="rowTitle">

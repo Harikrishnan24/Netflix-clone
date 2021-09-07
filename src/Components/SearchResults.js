@@ -19,6 +19,7 @@ const SearchResultsComponent = (props) => {
   console.log("Query is", query);
   const dispatch = useDispatch();
   useEffect(() => {
+    document.title = `Search results for  ${query}`;
     setLoaded(false);
     async function fetchMovies() {
       const linkUpdate = `search/multi?api_key=${requests.fetchApiKey}&language=en-US&query=${query}&page=${pageNo}include_adult=false`;
@@ -29,12 +30,12 @@ const SearchResultsComponent = (props) => {
     fetchMovies();
   }, [pageNo]);
 
-  console.log(pageNo);
-  console.log("Movie", movie);
+  //console.log(pageNo);
+  //console.log("Movie", movie);
   return (
     <div className="viewAll">
       <BackBtnComponent />
-      <h1>Search Results</h1>
+      <h1 style={{ padding: "20px" }}>Search Results</h1>
       <div className="searchPosters">
         {loaded ? (
           movie.length > 0 ? (

@@ -1,0 +1,10 @@
+.ratingComponent {
+  display: flex;
+  flex-direction: row;
+  margin-left: 20px;
+  color: white;
+  font-size: 15px;
+  font-weight: 700;
+  align-items: center;
+  width: 200px;
+}

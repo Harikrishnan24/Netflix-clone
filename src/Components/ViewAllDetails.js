@@ -17,6 +17,7 @@ const ViewAllDetailsComponent = (props) => {
   const pageNo = useSelector((state) => state.handlePageBtns);
   const dispatch = useDispatch();
   useEffect(() => {
+    document.title = "Movies";
     setLoaded(false);
     async function fetchMovies() {
       const linkUpdate = `/discover/movie?api_key=${requests.fetchApiKey}&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=${pageNo}&with_watch_monetization_types=flatrate`;
@@ -26,12 +27,12 @@ const ViewAllDetailsComponent = (props) => {
     }
     fetchMovies();
   }, [pageNo]);
-  console.log(pageNo);
-  console.log(movie);
+  //console.log(pageNo);
+  // console.log(movie);
   return (
     <div className="viewAll">
       <BackBtnComponent />
-      <h1>Discover Movies</h1>
+      <h1 style={{ padding: "10px" }}>Discover Movies</h1>
 
       <div className="moviePosters">
         {loaded ? (

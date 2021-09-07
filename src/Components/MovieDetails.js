@@ -5,6 +5,7 @@ import requests from "../requests";
 import "../Stylesheets/MovieDetails.css";
 import BackBtnComponent from "./BackBtn";
 import NavBarComponent from "./NavBarHeader";
+import RatingComponent from "./Rating";
 const MovieDetailsComponent = (props) => {
   const [movie, setMovie] = useState([]);
   const [casts, setCast] = useState([]);
@@ -13,6 +14,7 @@ const MovieDetailsComponent = (props) => {
     "https://t4.ftcdn.net/jpg/00/64/67/63/360_F_64676383_LdbmhiNM6Ypzb3FM4PPuFP9rHe7ri8Ju.jpg";
   const imgBaseURL = "https://image.tmdb.org/t/p/w500";
   useEffect(() => {
+    document.title = "Movie info";
     async function fetchMovie() {
       const request = await axios.get(
         `/movie/${id}?api_key=${requests.fetchApiKey}&language=en-US`
@@ -26,7 +28,7 @@ const MovieDetailsComponent = (props) => {
     }
     fetchMovie();
   }, [id]);
-  console.log("Casts are", casts);
+  //console.log("Casts are", movie);
 
   return (
     <div
@@ -44,7 +46,7 @@ const MovieDetailsComponent = (props) => {
       <div className="MovieDetails">
         <div className="movTitle">{movie.title ? movie.title : movie.name}</div>
         <div className="movDescription">{movie.overview}</div>
-
+        <RatingComponent rating={movie.vote_average} />
         <div className="movCastRow">
           <h2>Cast</h2>
           <div className="movCast">

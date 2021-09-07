@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import "../Stylesheets/HomeBanners.css";
 import axios from "../axios";
 import NavBarComponent from "./NavBarHeader";
+import { Link } from "react-router-dom";
 
 const BannerComponent = (props) => {
   //sconst imgBaseURL = "https://image.tmdb.org/t/p/w500";
@@ -13,12 +14,12 @@ const BannerComponent = (props) => {
         Math.random() * netRequest.data.results.length - 1
       );
       setNetMovies(netRequest.data.results[movid]);
-      console.log(movid);
+      //console.log(movid);
     }
     fetchNetData();
   }, [props.fetchURL]);
 
-  console.log(netMovie);
+  //console.log(netMovie);
   function truncate(str, n) {
     return str?.length > n ? str.substr(0, n - 1) + "..." : str;
   }
@@ -38,7 +39,9 @@ const BannerComponent = (props) => {
           {truncate(netMovie.overview, 150)}
         </div>
         <div className="">
-          <button className="playBtn">Play</button>
+          <Link to={`/tv/${netMovie.id}`} className="">
+            <button className="playBtn">Play</button>
+          </Link>
         </div>
       </div>
       <div className="bannerFadeBottom"></div>
