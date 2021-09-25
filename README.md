@@ -1,4 +1,9 @@
 # Netflix clone app using React JS
+Netflix clone with various features 
+- [x] Search Feature
+- [x] Fetching Movies and TV shows from API
+- [x] Multiple pages for Movies using redux
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
